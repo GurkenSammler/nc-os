@@ -427,8 +427,10 @@ fun AppsPanel(viewModel: HomeViewModel, first: FocusRequester) {
     val sounds = LocalSounds.current
     val info = remember { StorageInfo(context) }
     var storage by remember { mutableStateOf<StorageState?>(null) }
+    var infoFor by remember { mutableStateOf<String?>(null) }
     LaunchedEffect(Unit) { storage = withContext(Dispatchers.IO) { info.read() } }
     val s = storage
+    infoFor?.let { AppInfoDialog(it, onDismiss = { infoFor = null }) }
 
     val used = if (s != null && s.totalBytes > 0) 1f - s.freeBytes.toFloat() / s.totalBytes else 0f
     ConfigRow(
@@ -446,7 +448,7 @@ fun AppsPanel(viewModel: HomeViewModel, first: FocusRequester) {
         ConfigRow(
             label = a.label,
             hint = "APP ${bytesLabel(a.appBytes)} // DATA ${bytesLabel(a.dataBytes)} // CACHE ${bytesLabel(a.cacheBytes)}",
-            onClick = { sounds?.play(Sfx.ENTER); viewModel.tv.openAppInfo(a.packageName) },
+            onClick = { sounds?.play(Sfx.ENTER); infoFor = a.packageName },
         ) { TextValue(bytesLabel(a.total), it) }
     }
     ConfigRow(

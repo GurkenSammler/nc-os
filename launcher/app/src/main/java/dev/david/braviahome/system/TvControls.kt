@@ -6,7 +6,6 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.media.AudioManager
-import android.net.Uri
 import android.provider.Settings
 import android.widget.Toast
 
@@ -62,10 +61,6 @@ class TvControls(private val context: Context) {
         link.packageName?.let { intent.setPackage(it) }
         open(intent)
     }
-
-    /** Androids Infoseite einer App (Cache leeren, Deinstallieren, Beenden erzwingen). */
-    fun openAppInfo(packageName: String) =
-        open(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", packageName, null)))
 
     private fun open(intent: Intent) {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)

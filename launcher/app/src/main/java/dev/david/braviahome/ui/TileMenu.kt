@@ -17,12 +17,19 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.input.key.KeyEventType
+import androidx.compose.ui.input.key.key
+import androidx.compose.ui.input.key.onPreviewKeyEvent
+import androidx.compose.ui.input.key.type
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -47,6 +54,7 @@ fun TileMenu(title: String, code: String, items: List<MenuItem>, onDismiss: () -
     val first = remember { FocusRequester() }
     val sounds = LocalSounds.current
     val panelShape = remember { ChamferShape(16.dp, setOf(Corner.TopEnd, Corner.BottomStart)) }
+    val okArmed = remember { mutableStateOf(false) }
     val close = {
         sounds?.play(Sfx.MENU_CLOSE)
         onDismiss()
@@ -56,6 +64,7 @@ fun TileMenu(title: String, code: String, items: List<MenuItem>, onDismiss: () -
         Column(
             Modifier
                 .width(380.dp)
+                .ignoreHeldOk(okArmed)
                 .background(Cyber.panel, panelShape)
                 .border(1.dp, Cyber.red, panelShape),
         ) {
@@ -92,6 +101,21 @@ fun TileMenu(title: String, code: String, items: List<MenuItem>, onDismiss: () -
             sounds?.play(Sfx.MENU_OPEN)
             runCatching { first.requestFocus() }
         }
+    }
+}
+
+/**
+ * Das Menue geht auf, waehrend OK noch gedrueckt ist. tv-material3 klickt beim Loslassen, also
+ * wuerde der erste Eintrag sofort ausgeloest. Bis OK einmal losgelassen (oder frisch gedrueckt)
+ * wurde, schluckt das Menue die Taste.
+ */
+private fun Modifier.ignoreHeldOk(armed: MutableState<Boolean>) = onPreviewKeyEvent { e ->
+    val ok = e.key == Key.DirectionCenter || e.key == Key.Enter || e.key == Key.NumPadEnter
+    when {
+        armed.value || !ok -> false
+        e.type == KeyEventType.KeyUp -> { armed.value = true; true }
+        e.nativeKeyEvent.repeatCount == 0 -> { armed.value = true; false }
+        else -> true
     }
 }
 

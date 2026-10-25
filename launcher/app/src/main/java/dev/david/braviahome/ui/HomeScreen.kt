@@ -72,6 +72,7 @@ fun HomeScreen(viewModel: HomeViewModel, onOpenConfig: () -> Unit) {
     val sounds = LocalSounds.current
 
     var menuFor by remember { mutableStateOf<AppEntry?>(null) }
+    var infoFor by remember { mutableStateOf<String?>(null) }
     var movingPackage by remember { mutableStateOf<String?>(null) }
     var showHidden by remember { mutableStateOf(false) }
     var refocus by remember { mutableIntStateOf(0) }
@@ -113,6 +114,7 @@ fun HomeScreen(viewModel: HomeViewModel, onOpenConfig: () -> Unit) {
     LaunchedEffect(state.loaded, homePresses, refocus) {
         if (!state.loaded) return@LaunchedEffect
         menuFor = null
+        infoFor = null
         movingPackage = null
         showHidden = false
         // Kurz warten, bis eine gerade ausgeblendete Kachel wirklich weg ist.
@@ -290,7 +292,7 @@ fun HomeScreen(viewModel: HomeViewModel, onOpenConfig: () -> Unit) {
                         viewModel.setHidden(app.packageName, false)
                         refocus++
                     },
-                    MenuItem("App info") { Actions.openAppInfo(context, app.packageName) },
+                    MenuItem("App info") { infoFor = app.packageName },
                 )
             } else {
                 listOf(
@@ -299,11 +301,12 @@ fun HomeScreen(viewModel: HomeViewModel, onOpenConfig: () -> Unit) {
                         viewModel.setHidden(app.packageName, true)
                         refocus++
                     },
-                    MenuItem("App info") { Actions.openAppInfo(context, app.packageName) },
+                    MenuItem("App info") { infoFor = app.packageName },
                 )
             }
             TileMenu(title = app.label, code = app.packageName, items = items, onDismiss = { menuFor = null })
         }
+        infoFor?.let { AppInfoDialog(it, onDismiss = { infoFor = null }) }
     }
 }
 

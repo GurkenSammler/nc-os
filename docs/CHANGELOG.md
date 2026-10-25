@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1 – 2026-10-25
+- Langes OK löst im Optionsmenü nicht mehr sofort „Move“ (bzw. „Unhide“) aus: Das Menü ignoriert OK, bis die
+  Taste einmal losgelassen wurde.
+- Eigenes Fenster APP INFO statt Androids Infoseite (aus dem Optionsmenü und aus SYS.CONFIG > 06): Version,
+  Herkunft, Speicher, zuletzt benutzt, Bildschirmzeit (7 Tage), gewährte Freigaben, Installationsdatum.
+  Beenden erzwingen, Daten löschen und Deinstallieren gehen weiter über „System Page“ (darf nur Android).
+
 ## 1.0 – 2026-10-25
 - Veröffentlichungsfertig gemacht: App heißt NC-OS, eigene Standard-UI-Sounds (`sounds/default`, errechnet),
   private Sounds in `sounds/custom` ersetzen sie beim Bauen, Paketname per `ncos.applicationId` änderbar,

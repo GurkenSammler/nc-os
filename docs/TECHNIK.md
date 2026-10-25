@@ -18,7 +18,7 @@
 - `dream/` Bildschirmschoner: `DreamView` (Szene, Uhr, Scanlines, Wechsel) + eine Szene pro Stil,
   `VideoLoopScene` mit ExoPlayer auf einer `SurfaceView` darunter.
 - `system/` TV-Anbindung: `TvControls` (Lautstärke, Standby, Sprünge), `SonyApi`/`SonyTv` (Bild/Ton),
-  `NetworkInfo`, `BluetoothInfo`, `StorageInfo`.
+  `NetworkInfo`, `BluetoothInfo`, `StorageInfo`, `AppDetails` (APP INFO-Fenster).
 - `data/BackupManager` exportiert alle Einstellungen generisch als JSON (neue Einstellungen kommen automatisch mit).
   Der Sony-Schlüssel liegt in einem eigenen Speicher und ist nicht im Backup.
 
@@ -42,7 +42,7 @@ restore  <zeit>
 | Bedienungshilfe `QuickPanelService` | Zahnrad-Taste abfangen |
 | `ACCESS_FINE_LOCATION` | WLAN-Name und Scan |
 | `BLUETOOTH_CONNECT` | Gekoppelte Geräte |
-| `appops GET_USAGE_STATS` | App-Größen |
+| `appops GET_USAGE_STATS` | App-Größen, „zuletzt benutzt“ und Bildschirmzeit im APP INFO-Fenster |
 
 ## Test-Schalter per adb
 `QuickTestReceiver` (nur mit DUMP-Berechtigung, also Shell/System):
