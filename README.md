@@ -49,6 +49,7 @@ Andere BRAVIA-Modelle funktionieren wahrscheinlich ähnlich, die Debloat-Listen 
 - Windows mit PowerShell 5.1 (vorinstalliert) oder 7.
 - `adb` (Android Platform Tools), z. B. `winget install Google.PlatformTools`.
 - Zum Bauen: JDK 17 oder neuer und das Android SDK (Platform 35). Gradle lädt den Rest selbst.
+  Das SDK findet Gradle über `ANDROID_HOME` oder `sdk.dir=<Pfad>` in `launcher/local.properties`.
   Wenn Gradle das JDK nicht findet: `org.gradle.java.home=<Pfad>` in `%USERPROFILE%\.gradle\gradle.properties`.
 - Am TV: Einstellungen → System → Info → 7× auf **Build** → Entwickleroptionen → **USB-Debugging an**.
 
