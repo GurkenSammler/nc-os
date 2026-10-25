@@ -1,0 +1,19 @@
+# Privat / geraetespezifisch - nie ins Repo
+.device
+backups/
+sounds/custom/
+launcher/keystore.properties
+*.jks
+*.keystore
+
+# Build und IDE
+launcher/.gradle/
+launcher/build/
+launcher/app/build/
+launcher/local.properties
+launcher/.kotlin/
+launcher/.idea/
+*.iml
+.idea/
+.DS_Store
+Thumbs.db

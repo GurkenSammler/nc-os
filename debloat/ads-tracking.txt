@@ -1,0 +1,8 @@
+# Werbung, Zuschau-Erkennung (ACR) und Nutzungsdaten.
+tv.samba.ssm                      # Samba TV: erkennt per ACR, was laeuft, fuer Werbezwecke
+com.sony.dtv.promos               # Sony-Werbeaktionen und Angebote
+com.sony.dtv.sonyselect           # "Sony Select": App-Werbung
+com.sonyericsson.idd.agent        # IDD: Sony-Nutzungsdaten-Sammler
+com.sony.dtv.sonybugreportsys     # automatische Fehlerberichte an Sony
+com.google.android.feedback       # Google-Feedback/Absturzberichte
+android.autoinstalls.config.sony.bravia   # Play Auto Installs: installiert Partner-Apps ungefragt nach

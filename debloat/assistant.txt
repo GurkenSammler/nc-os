@@ -1,0 +1,5 @@
+# Google Assistant und Sprachsuche. Danach tut die Assistant-Taste der Fernbedienung nichts mehr.
+# Tippen mit der Bildschirmtastatur geht weiter.
+com.google.android.katniss                # Google Assistant / Suche (~160 MB RAM)
+com.sony.dtv.assistantadapter             # Sonys Bruecke zum Assistant
+com.sony.dtv.voicesearch                  # Sony-Sprachsuche

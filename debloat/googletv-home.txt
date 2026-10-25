@@ -1,0 +1,13 @@
+# Google-TV-Startbildschirm samt Empfehlungen. Erst ausschalten, wenn unser Launcher die
+# HOME-Rolle hat (debloat.ps1 bricht sonst ab).
+#
+# Reihenfolge ist wichtig: Android nimmt fuer HOME immer die hoechste Prioritaet, egal was
+# eingestellt ist. launcherx hat 2, die Recovery-Seite der Einrichtung 1, unser Launcher 0.
+# Deshalb zuerst die Einrichtung aus (Shell darf nur ganze Pakete schalten), dann launcherx.
+com.google.android.tungsten.setupwraith   # Google-TV-Einrichtung mit Not-Startseite (Prioritaet 1, ~85 MB)
+com.google.android.apps.tv.launcherx      # Google-TV-Startbildschirm (~340 MB RAM in zwei Prozessen)
+com.sony.dtv.launcherxcustomizer          # Sonys Anpassungen fuer diesen Startbildschirm
+com.sony.dtv.sonytab                      # Sony-Reiter im Google-TV-Startbildschirm
+com.google.android.apps.tv.dreamx         # Ambient Mode, wird durch unseren Bildschirmschoner ersetzt
+com.google.android.videos                 # "Google TV"-App (Filme kaufen/leihen, Empfehlungen)
+com.google.android.play.games             # Play-Spiele-App

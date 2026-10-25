@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NC-OS</string>
+    <string name="screensaver_name">NC-OS Bildschirmschoner</string>
+    <string name="quick_panel_name">NC-OS Schnellmenue</string>
+    <string name="quick_panel_description">Ersetzt Sonys Schnelleinstellungen: faengt nur die Zahnrad-Taste der Fernbedienung ab und zeigt ein eigenes Menue.</string>
+</resources>

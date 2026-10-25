@@ -1,0 +1,75 @@
+# Pakete, die debloat.ps1 NIE ausschaltet, egal in welcher Liste sie stehen.
+# Wildcards (*) erlaubt. Abgeglichen mit der Bestandsaufnahme vom 2026-10-24
+# (KD-50X80J, Plattform "BRAVIA 4K VH2", Android 12).
+
+# Kern-System
+android
+com.android.*                            # alles von Android selbst (SystemUI, Settings, Provider, WLAN, Bluetooth ...)
+com.google.android.ext.*
+com.google.android.overlay.*
+com.google.android.packageinstaller
+com.google.android.permissioncontroller
+com.google.android.modulemetadata
+com.google.android.webview
+com.google.android.tts
+*.overlay                                 # Overlays sind nur Ressourcen
+*.overlay.*
+*.rro
+
+# Google-Grundlage, ohne die Play-Store-Apps (Netflix, YouTube ...) nicht laufen
+com.google.android.gms
+com.google.android.gsf
+com.android.vending
+
+# Ersteinrichtung (com.google.android.tungsten.setupwraith) ist bewusst NICHT hier:
+# Sie hat eine Not-Startseite mit HOME-Prioritaet 1 und muss aus, damit unser Launcher gewinnt.
+# Shell darf auf Android 12 keine einzelnen Komponenten abschalten, nur ganze Pakete.
+# WLAN-Risiko geprueft am 2026-10-24: gespeicherte Netze gehoeren uid 1000 (System), nicht ihr.
+
+# Fernbedienung, Tastatur
+com.google.android.tv.remote.service
+com.google.android.inputmethod.latin
+com.sony.dtv.ime.chww
+com.sony.dtv.imeproxy
+com.sony.dtv.irbservice
+com.sony.dtv.irblaster
+com.sony.dtv.remotecontrolsettings
+com.sony.dtv.globalkeyoverlay
+com.netflix.partner.ncm                   # Netflix-Taste
+
+# Bild, Ton und Eingaenge des Fernsehers
+com.sony.dtv.tvx                          # TV-App: zeigt HDMI und Antenne
+com.sony.dtv.tvx.*
+com.sony.dtv.tvinput.*
+com.sony.dtv.tvapi
+com.sony.dtv.braviasync*                  # HDMI-CEC (Soundbar, Konsole)
+com.sony.dtv.HomeTheatreControl
+com.sony.dtv.audiooutput
+com.sony.dtv.audiosysteminfoprovider
+com.dolby.android.audio.service
+com.sony.dtv.panelsettings
+com.sony.dtv.osdplanevisibilitymanager
+com.sony.dtv.videoframeserver
+com.sony.dtv.broadcastclock.*
+com.sony.dtv.tvsettingsbroadcast*
+mtktvapi.agent
+com.mediatek.*
+
+# Sony-Systemdienste und Einstellungen
+com.sony.dtv.sonysystemservice
+com.sony.dtv.sonyvendorservice
+com.sony.dtv.devicecontrolservice
+com.sony.dtv.systemcontrolproxy
+com.sony.dtv.settings
+com.sony.dtv.settingsprovider
+com.sony.dtv.configsettings
+com.sony.dtv.networksettings
+com.sony.dtv.homenetwork
+com.sony.dtv.connecteddevicesettings
+com.sony.dtv.countrysetting
+com.sony.dtv.provider.modelvariation
+com.sony.dtv.servicemode
+com.sony.dtv.b2b.frameworkextension
+
+# Unser eigener Launcher
+dev.david.braviahome

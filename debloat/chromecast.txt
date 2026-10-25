@@ -1,0 +1,8 @@
+# Vom Handy auf den TV streamen: Chromecast, AirPlay, DIAL, DLNA, HomeKit.
+com.google.android.apps.mediashell        # Chromecast built-in (~100 MB)
+com.sony.dtv.airplayapp                   # Apple AirPlay (~200 MB in zwei Prozessen)
+com.sony.dtv.homekit                      # Apple HomeKit
+# com.sony.dtv.webapi.core  # bleibt an (v0.9): Sony-API fuer SYS.CONFIG PICTURE/SOUND, siehe enable-sony-api.ps1. Bringt DIAL mit.
+com.sonyericsson.dlna                     # DLNA-Empfaenger
+com.sony.huey.dlna.module                 # DLNA-Empfaenger
+com.sony.huey.dlna.renderersettings       # DLNA-Einstellungen

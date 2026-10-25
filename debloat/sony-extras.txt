@@ -1,0 +1,20 @@
+# Sony-Zusatzapps, Demo, Hilfe und Kamera-Funktionen (der X80J hat keine BRAVIA CAM).
+com.sony.dtv.demosupport                  # Laden-Demo
+com.sony.dtv.demosystemsupport            # Laden-Demo
+com.sony.dtv.multiscreendemo              # Laden-Demo ("Darwin")
+com.sony.dtv.smarthelp                    # Hilfe-App
+com.sony.dtv.helpguidecontents            # Hilfe-Anleitung
+com.sony.dtv.customersupport              # Kundendienst-App
+com.sony.dtv.accessibility.tutorial       # Bedienungshilfen-Tutorial
+com.sony.dtv.notificationcenter           # Sony-Mitteilungen (auch Angebote)
+com.sony.dtv.ecodashboard                 # Eco-Dashboard-App
+com.sony.dtv.calibrationmonitor           # Kalibrierungs-Pruef-App
+com.sony.dtv.osat.music                   # Sony-Musikplayer
+com.sonypicturescore                      # BRAVIA CORE (Sony Pictures)
+com.sony.dtv.livingfit                    # Fitness-App fuer BRAVIA CAM (laeuft dauerhaft, ~87 MB)
+com.sony.dtv.gestureapp                   # Gestensteuerung per Kamera
+com.sony.dtv.distancealert                # Abstandswarnung per Kamera
+com.sony.dtv.sensingcamera.fwupdate       # Kamera-Firmware
+com.sony.dtv.sensingcamera.settings       # Kamera-Einstellungen
+com.sony.dtv.seeds.iot                    # Smart-Speaker/Alexa-Anbindung (~84 MB)
+com.sony.dtv.seeds.iot.remotestart        # Einschalten per Smart-Speaker

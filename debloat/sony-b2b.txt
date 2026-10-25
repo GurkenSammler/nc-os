@@ -1,0 +1,12 @@
+# Hotel- und Profi-Modus (B2B). Fuer Zuhause unnoetig, laeuft aber teils dauerhaft.
+# Eigene Kategorie, weil das Risiko schwerer einzuschaetzen ist: einzeln testen.
+com.sony.dtv.b2b.rs232csupport            # Steuerung per RS-232 (~69 MB, laeuft dauerhaft)
+com.sony.dtv.b2b.hotelmode
+com.sony.dtv.b2b.prosettings
+com.sony.dtv.b2b.importexport
+com.sony.dtv.b2b.adminpassword
+com.sony.dtv.b2b.noderuntime.normal
+com.sony.dtv.b2b.noderuntime.privilege
+com.sony.dtv.b2b.noderuntimeextension.bpk
+com.sony.dtv.b2b.noderuntimeextension.node_20_11_1
+com.sony.dtv.b2b.webappruntimedrm

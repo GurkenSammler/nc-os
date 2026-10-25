@@ -1,0 +1,9 @@
+# Firmware-Updates und Sony-Fernwartung. Danach kommt keine neue Sony-Firmware mehr
+# (auch keine Sicherheits-Updates), bis restore.ps1 oder ein Werksreset sie wieder einschaltet.
+# App-Updates aus dem Play Store laufen weiter.
+com.sony.dtv.systemupdate                 # Firmware-Update (Download/Installation)
+com.sony.dtv.update                       # Firmware-Update (Pruefung/Benachrichtigung)
+com.sony.dtv.otaurlprovisioning           # Update-Server-Adressen
+com.sony.dtv.oadservice                   # Firmware-Update ueber Antenne/Satellit
+com.sony.dtv.da.service                   # Device Agent: Sony-Fernwartung
+com.qterics.da.product                    # Device Agent (Qterics)

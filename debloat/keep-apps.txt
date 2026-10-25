@@ -1,0 +1,7 @@
+# Apps, die David wirklich benutzt. remove-apps.ps1 loescht jede selbst installierte App,
+# die hier nicht steht.
+com.apple.atve.sony.appletv               # Apple TV
+com.google.android.youtube.tv             # YouTube
+com.netflix.ninja                         # Netflix
+com.amazon.amazonvideo.livingroom         # Prime Video
+com.crunchyroll.crunchyroid               # Crunchyroll (Anime)

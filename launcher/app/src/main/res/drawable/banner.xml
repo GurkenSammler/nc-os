@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Banner (320x180) im Cyberpunk-Stil: schwarzer Grund, roter Rahmen mit abgeschraegter Ecke, Cyan-Balken. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <path
+        android:fillColor="#FF05080D"
+        android:pathData="M0,0h320v180h-320z" />
+    <path
+        android:strokeColor="#FFE8604F"
+        android:strokeWidth="3"
+        android:pathData="M60,50h200v60l-20,20h-180z" />
+    <path
+        android:fillColor="#FFE8604F"
+        android:pathData="M72,64h10v10h-10z" />
+    <path
+        android:fillColor="#FF5EF0FF"
+        android:pathData="M92,98h120v6h-120z" />
+    <path
+        android:fillColor="#FF7A2A28"
+        android:pathData="M92,80h80v4h-80z" />
+</vector>

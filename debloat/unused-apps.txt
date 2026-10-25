@@ -1,0 +1,7 @@
+# Vorinstallierte Apps, die David nicht braucht (er nutzt nur Apple TV, YouTube, Netflix, Prime).
+# Vorinstallierte Apps lassen sich ohne Root nicht loeschen, nur ausschalten.
+com.google.android.youtube.tvmusic        # YouTube Music
+com.sony.dtv.smartmediaapp                # Sony Mediaplayer (USB-Fotos/Videos)
+com.sony.dtv.recapp                       # Aufnahmen-App (USB-Festplatte)
+com.vewd.core.integration.dia             # Vewd-Internetbrowser (der Browser-Kern fuer HbbTV bleibt)
+de.hdplus.tvapp.androidtv                 # HD+ (Satelliten-Bezahlfernsehen)
