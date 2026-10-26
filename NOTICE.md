@@ -1,32 +1,31 @@
-# Hinweise zu Marken und fremden Bestandteilen
+# Notices on trademarks and third-party components
 
-## Marken
-NC-OS ist ein privates Projekt und steht in keiner Verbindung zu Sony, Google oder CD PROJEKT RED.
-- „Sony“ und „BRAVIA“ sind Marken der Sony Group Corporation.
-- „Google TV“ und „Android“ sind Marken von Google LLC.
-- „Cyberpunk 2077“ ist eine Marke von CD PROJEKT S.A.
+## Trademarks
+NC-OS is a private project and is not affiliated with Sony, Google or CD PROJEKT RED.
+- “Sony” and “BRAVIA” are trademarks of Sony Group Corporation.
+- “Google TV” and “Android” are trademarks of Google LLC.
+- “Cyberpunk 2077” is a trademark of CD PROJEKT S.A.
 
-Die Namen werden nur genannt, um zu beschreiben, für welches Gerät die Software gedacht ist und welchen Stil
-sie aufgreift. Die Oberfläche ist von Spielmenüs inspiriert. Alle Grafiken, Szenen und Animationen sind im
-Code gezeichnet, es sind keine Bilder aus dem Spiel enthalten. App-Logos auf dem Startbildschirm liefern die
-installierten Apps selbst zur Laufzeit.
+The names are only used to describe which device the software is meant for and which style it draws on. The
+interface is inspired by game menus. All graphics, scenes and animations are drawn in code; no images from the
+game are included. App logos on the home screen are supplied at runtime by the installed apps themselves.
 
-## Enthaltene fremde Bestandteile
-| Bestandteil | Lizenz | Ort |
+## Included third-party components
+| Component | License | Location |
 |---|---|---|
-| Schrift Rajdhani (Indian Type Foundry) | SIL Open Font License 1.1 | `launcher/app/src/main/res/font/`, Lizenztext `launcher/FONT-LICENSE-OFL.txt` |
+| Font Rajdhani (Indian Type Foundry) | SIL Open Font License 1.1 | `launcher/app/src/main/res/font/`, license text `launcher/FONT-LICENSE-OFL.txt` |
 | Gradle Wrapper | Apache License 2.0 | `launcher/gradle/wrapper/` |
 
-## Abhängigkeiten (lädt Gradle beim Bauen)
+## Dependencies (downloaded by Gradle at build time)
 AndroidX / Jetpack Compose, Compose for TV, DataStore, Lifecycle, Media3 ExoPlayer, Kotlin – Apache License 2.0.
 
-## Daten und Dienste
-- Wetterdaten: [Open-Meteo.com](https://open-meteo.com/), Lizenz CC BY 4.0. Die Quellenangabe steht in
+## Data and services
+- Weather data: [Open-Meteo.com](https://open-meteo.com/), license CC BY 4.0. The attribution is shown in
   SYS.CONFIG › Status.
-- Bild- und Toneinstellungen nutzen die IP-Steuerung, die Sony in den Fernsehern selbst anbietet.
+- Picture and sound settings use the IP control that Sony itself offers in its TVs.
 
-## Nicht enthalten (bitte nicht veröffentlichen)
-- `sounds/custom/`: eigene oder fremde Sounds, die die Standard-Sounds ersetzen. Fremde Sounds (z. B. aus
-  Spielen) dürfen ohne Erlaubnis der Rechteinhaber nicht weitergegeben werden.
-- Video-Loops für den Schoner: liegen nur auf dem TV.
-- `backups/` und `.device`: gerätespezifische Daten, Screenshots und der Sony-Schlüssel.
+## Not included (please don't publish)
+- `sounds/custom/`: your own or third-party sounds that replace the default sounds. Third-party sounds
+  (e.g. from games) must not be redistributed without the rights holders' permission.
+- Video loops for the screensaver: they only live on the TV.
+- `backups/` and `.device`: device-specific data, screenshots and the Sony key.
